@@ -1,0 +1,191 @@
+body{
+    background: #009FBD;
+    margin: 0;
+    font-family: 'Fjalla One', sans-serif;
+    color: white;
+}
+
+header{
+    background: #1D267D;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 150%;
+}
+
+/*ACA EMPIEZA EL CODIGO DEL MAIN*/
+main{
+    display: flex;
+    justify-content: space-around;
+    background: #009FBD;
+}
+
+#container-principal{
+    display: flex;
+    flex-wrap: wrap;
+    background: #F9E2AF;
+    width: 610px;
+    height: 610px;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1%;
+    border-radius: 10px;
+    border: solid 2px black;
+    box-shadow: 5px 5px 5px black;
+}
+
+#container-principal div{
+    width: 90px;
+    height: 90px;   
+    background: #009FBD;
+    border-radius: 50%;
+    border: solid 1px black;
+}
+
+#container-principal div:hover{
+    cursor: pointer;
+    background: #0286a0;
+}
+
+.jugador{
+    font-size: 120%;
+    background: #F9E2AF;
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    border: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+    color: black;
+    box-shadow: 5px 5px 5px black;
+}
+
+.jugador:hover{
+    cursor: pointer;
+    background: rgb(229, 118, 229);
+}
+
+#jugador-dos:hover{
+    cursor: pointer;
+    background: rgb(123, 229, 118);
+}
+
+#alerta-uno, #alerta-dos{
+    position: absolute;
+    top: 50%;
+    background: #1D267D;
+    height: 150px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 2px gold;
+    border-radius: 15px;
+}
+
+#boton-alerta-dos,#boton-alerta-uno {
+    padding: 1em 2em;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: black;
+    transition: all 1000ms;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid black;
+}
+  
+#boton-alerta-dos:hover, #boton-alerta-uno:hover {
+    color: black;
+    transform: scale(1.1);
+    outline: 2px solid #000000;
+    box-shadow: 4px 5px 17px -4px #268391;
+}
+  
+#boton-alerta-dos::before, #boton-alerta-uno::before  {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #17e8ff;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+}
+  
+#boton-alerta-dos:hover::before, #boton-alerta-uno:hover::before {
+    width: 250%;
+}
+  
+/*ACA TERMINA EL CODIGO DEL MAIN*/
+
+@media screen and (max-width: 768px){
+    header{
+        width: 100%;
+        height: 100px;
+    }
+
+    header h1{
+        width: 90%;
+        font-size: 100%;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #009FBD;
+        width: 100%;
+    }
+
+    #container-principal{
+        display: flex;
+        flex-wrap: wrap;
+        background: #F9E2AF;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 1%;
+        border-radius: 10px;
+        border: solid 2px black;
+        box-shadow: 5px 5px 5px black;
+        width: 350px;
+        height: 350px;
+    }
+
+    #container-principal div{
+        width: 15%;
+        height: 15%;   
+        background: #009FBD;
+        border-radius: 50%;
+        border: solid 1px black;
+    }
+
+    .jugador{
+        font-size: 70%;
+        background: #F9E2AF;
+        width: 80%;
+        height: 80px;
+        border-radius: 10px;
+        border: solid 1px black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1%;
+        color: black;
+        box-shadow: 5px 5px 5px black;
+        margin-bottom: 2%;
+        margin-top: 2%;
+    }
+}
+
